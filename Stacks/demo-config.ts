@@ -26,7 +26,7 @@ export const demoConfig: MicroserviceProps = {
     //   },
      
     //     AUTHORIZER: {
-    //       name: `jwt-authorizer2`,
+    //       name: `jwt-authorizer`,
     //       codePath: './lambda-functions/auth/index.ts',
     //       handler: 'handler',
     //   }, 
@@ -101,12 +101,12 @@ export const demoConfig: MicroserviceProps = {
 
     },
     DNS: {
-      ZoneName: 'dev.davissylvester.com',
-      ZoneId: 'Z031821638KLJ1HEVKJKI',
-      ZoneNameWithoutPeriod: 'not-used',
-      ZoneNameWithoutSuffix: 'not-used',
+      ZoneName: 'davis-sylvester.com',
+      ZoneId: 'Z09962181MDZMHGNXMN4O',
+      ZoneNameWithoutPeriod: 'davis-sylvester.com',
+      ZoneNameWithoutSuffix: 'davis-sylvester',
       ZoneExist: true,
-      HostName: '',
+      HostName: 'ui.dev',
       FQDN: 'davis-test.dev.davissylvester.com'
   }
 }; 
