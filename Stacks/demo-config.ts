@@ -6,7 +6,7 @@ export const demoConfig: MicroserviceProps = {
     GLOBALS: {
         name: `sample-test-app`,
         stackRuntime: Runtime.NODEJS_18_X,        
-        prefix: 'ds-sta',
+        prefix: 'ds-sample-app',
         accountNumber: process.env.CDK_DEFAULT_ACCOUNT!,
         region: process.env.CDK_DEFAULT_REGION!,
     },
@@ -25,17 +25,16 @@ export const demoConfig: MicroserviceProps = {
     //     }
     //   },
      
-    //     AUTHORIZER: {
-    //       name: `jwt-authorizer`,
-    //       codePath: './lambda-functions/auth/index.ts',
-    //       handler: 'handler',
-    //   }, 
+        AUTHORIZER: {
+          name: `jwt-authorizer`,
+          codePath: './lambda-functions/auth/index.ts',
+          handler: 'handler',
+      }, 
         LAMBDA: [
             {
                 name: `hello-world`,
                 codePath: './lambda-functions/hello-world/index.ts',
-                handler: 'main',
-                            
+                handler: 'main',                            
                 apiGateway: {
                   route: '/hello-world',
                   method: 'get',      
