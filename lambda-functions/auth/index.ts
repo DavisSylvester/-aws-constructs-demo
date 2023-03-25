@@ -9,9 +9,9 @@ const getVerifier = async (): Promise<CognitoJwtVerifierSingleUserPool<{userPool
     if ( ! _verifier ) {
         
         _verifier = CognitoJwtVerifier.create({
-            userPoolId: 'us-east-1_evK2bHm5q', //secrets.cognito.userPoolId,
+            userPoolId: process.env.COGNITO_USER_POOL || '',
             tokenUse: "id",
-            clientId: '6on4vr17e6aiji6n7t3ttd3apj', //secrets.cognito.clientId,
+            clientId: process.env.COGNITO_CLIENT_ID || '',
         });
     }
     return _verifier;
